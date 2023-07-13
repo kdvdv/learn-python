@@ -1,27 +1,13 @@
-# Upper method
-print("\n ----- Upper method")
-a = "  Hello, World  "
-print(a.upper())
+# string format
+print("\n----- Format")
+age = 34
+txt = "My name in John, and I am {}"
+print("\n" + txt.format(age))
 
-# Lower method
-
-print("\n ----- Lower method")
-
-print(a.lower())
-
-# Whitespace
-
-print("\n ----- Whitespace")
-print(a.strip())
-
-# Replace Change
-
-print("\n ----- Replace")
-print(a.replace("H", "J"))
-
-# Split()
-print("\n----- Split")
-print(a.split(","))
-print(a.split("W"))
-b = a.split(",")
-print(b)
+quantity = 3
+item = 234
+price = 45.56
+myorder = "I want {} pieces of item {} for {} dollars."
+myorder = "I want {1} pieces of item {0} for {2} dollars."
+print(myorder.format(quantity, item, price))
+print(myorder.format(price, item, quantity))
