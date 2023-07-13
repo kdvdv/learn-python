@@ -1,34 +1,27 @@
-# While Loop
-print("While")
+# looping Through
+print("\n-----LOOPING")
 
-i = 0
-while i < 10:
-    print(i, end=", ")
-    i += 1
-# While with brake
-print("\nBrake")
+for x in "Banana":
+    print(x, end=" ")
 
-i = 1
-while i < 10:
-    print(i, end=(", "))
-    if i == 3:
-        break
-    i += 1
+# Check String
+print()
+print("\n-----Check string")
 
-# While with continue
-print("\nContinue")
+txt = "The best things in life are free"
+print("free" in txt)
 
-i = 0
-while i < 10:
-    i += 1
-    if i == 5:
-        continue
-    print(i, end=(", "))
-# Else statement
-print("\n Else")
-i = 1
-while i < 10:
-    print(i, end=(", "))
-    i += 1
-else:
-    print("\ni is no longer than 10")
+# If in String
+print("\n-----If in string")
+txt = "The best things in life are free"
+if "free" in txt:
+    print("Yes, 'free' is present")
+
+# NOT
+print("\n-----NOT")
+print("expensive" not in txt)
+
+# In in IF
+print("\n----- In in IF")
+if "expensive" not in txt:
+    print("No, 'expensive' in NOT present")
