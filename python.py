@@ -1,27 +1,27 @@
-# looping Through
-print("\n-----LOOPING")
+# Upper method
+print("\n ----- Upper method")
+a = "  Hello, World  "
+print(a.upper())
 
-for x in "Banana":
-    print(x, end=" ")
+# Lower method
 
-# Check String
-print()
-print("\n-----Check string")
+print("\n ----- Lower method")
 
-txt = "The best things in life are free"
-print("free" in txt)
+print(a.lower())
 
-# If in String
-print("\n-----If in string")
-txt = "The best things in life are free"
-if "free" in txt:
-    print("Yes, 'free' is present")
+# Whitespace
 
-# NOT
-print("\n-----NOT")
-print("expensive" not in txt)
+print("\n ----- Whitespace")
+print(a.strip())
 
-# In in IF
-print("\n----- In in IF")
-if "expensive" not in txt:
-    print("No, 'expensive' in NOT present")
+# Replace Change
+
+print("\n ----- Replace")
+print(a.replace("H", "J"))
+
+# Split()
+print("\n----- Split")
+print(a.split(","))
+print(a.split("W"))
+b = a.split(",")
+print(b)
