@@ -11,3 +11,20 @@
 # 3 - 1
 
 # То есть в примере выше нулей одна штука, единиц 4 штуки, и т.д
+
+import random
+
+inputListLength = int(input("List leght -"))
+userRangeOfNum = int(input("Renge from 0 - "))
+
+
+def createListWithNumbers(listLength, rangeOfNum):
+    x = 0
+    listWithNumbers = []
+    while x < listLength:
+        listWithNumbers.append(random.randint(0, rangeOfNum))
+        x += 1
+    return listWithNumbers
+
+
+print(createListWithNumbers(inputListLength, userRangeOfNum))
