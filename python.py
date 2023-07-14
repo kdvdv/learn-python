@@ -1,58 +1,100 @@
-# For loops
-print("\n-----For loop\n")
-
-b = "banana"
-fruits = ["apple", b, "cherry"]
-for x in fruits:
-    print(x, end=", ")
-
-# looping through
-print("\n\n----- Looping through\n")
-for x in b:
-    print(x, end=", ")
-
-# Break
-print("\n\n-----Break\n")
-for x in fruits:
-    print(x)
-    if x == "banana":
-        break
-for x in fruits:
-    if x == "banana":
-        break
-    print(x)
+def myFunction():
+    print("Hello from function")
 
 
-# Range Function
-print("\n-----Range\n")
+myFunction()
 
-for x in range(6):
-    print(x, end=",")
 
-print("\nrange 2-6")
-for x in range(2, 6):
-    print(x, end=",")
-print("\n\nrange 2-4, step 4")
-for x in range(2, 30, 4):
-    print(x, end=",")
+def myfunction(fname):
+    print(fname + " Refsnes")
 
-print("\n\n----- else in for")
-for x in range(6):
-    print(x, end=" ")
-else:
-    print("\nFinally")
 
-# Nested Loops
-print("\n-----Nested Loops\n")
+myfunction("Emil")
+myfunction("Tobias")
+myfunction("Linus")
 
-adj = ["red", "big", "tasty"]
+# 2 argument in function
 
-for x in adj:
-    for y in fruits:
-        print(x, y)
 
-# pass
-for x in [0, 1, 2]:
+def twoargument(fname, Lname):
+    print(fname + " " + Lname)
+
+
+twoargument("Emil", "dkfjkd")
+
+
+# Arbitrary arguments
+def arguments(*kids):
+    print("The youngest child is " + kids[0])
+
+
+arguments("Emil", "Tobias", "Linus")
+
+# Key value syntax
+
+
+def syntax(child1, child2, child3):
+    print("The youngest chils is " + child3)
+
+
+syntax(child1="Emil", child2="Tobias", child3="Linus")
+
+# Arbitraray keyword Argument
+
+
+def kwargs(**kid):
+    print("His last name is " + kid["lname"])
+
+
+kwargs(fname="Tobias", lname="Refsnes")
+
+# Default Parameter value
+
+
+def mycountry(country="Norwey"):
+    print("I am from " + country)
+
+
+mycountry("Sweden")
+mycountry()
+mycountry("India")
+mycountry("Brazil")
+
+
+# Passing a List as an Argument
+def foodmy(food):
+    for x in food:
+        print(x)
+
+
+fruits = ["apple", "banana", "cherry"]
+foodmy(fruits)
+
+
+# Return Values
+def multip(x):
+    return 5 * x + 2
+
+
+print(multip(3))
+print(multip(5))
+print(multip(7))
+
+
+# Pass
+def myfunc():
     pass
 
-# Great works!
+
+# Recursion
+def tri_recursion(k):
+    if k > 0:
+        result = k + tri_recursion(k - 1)
+        print(result)
+    else:
+        result = 0
+    return result
+
+
+print("\n\nRecursion Example Results")
+tri_recursion(4)
