@@ -27,4 +27,21 @@ def createListWithNumbers(listLength, rangeOfNum):
     return listWithNumbers
 
 
-print(createListWithNumbers(inputListLength, userRangeOfNum))
+def listCindOfnumbers(RangeOfNum):
+    cindOfNum = []
+    i = 0
+    while i <= RangeOfNum:
+        cindOfNum.append(i)
+        i += 1
+    return cindOfNum
+
+
+def printResult(cindNum):
+    for i in cindNum:
+        print(i, " - ", listWithNumbers.count(i))
+
+
+listWithNumbers = createListWithNumbers(inputListLength, userRangeOfNum)
+
+print(listWithNumbers)
+print(printResult(listCindOfnumbers(userRangeOfNum)))
