@@ -29,10 +29,10 @@ def createListWithNumbers(listLength, rangeOfNum):
 
 def listCindOfnumbers(RangeOfNum):
     cindOfNum = []
-    i = 0
-    while i <= RangeOfNum:
-        cindOfNum.append(i)
-        i += 1
+    i = RangeOfNum
+    while i >= 0:
+        cindOfNum.insert(0, i)
+        i -= 1
     return cindOfNum
 
 
@@ -44,4 +44,4 @@ def printResult(cindNum):
 listWithNumbers = createListWithNumbers(inputListLength, userRangeOfNum)
 
 print(listWithNumbers)
-print(printResult(listCindOfnumbers(userRangeOfNum)))
+printResult(listCindOfnumbers(userRangeOfNum))
